@@ -1,0 +1,54 @@
+.products Link image{
+  /* margin: 5px 15px; */
+  width: 500;
+  height: 500;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+
+.cascade Link{
+  /* margin: 5px 15px; */
+  width: 500;
+  height: 500;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+
+.cascade Link image{
+  /* margin: 5px 15px; */
+  width: 500;
+  height: 500;
+}
+
+
+.pitting Link image{
+  /* margin: 5px 15px; */
+  width: 500;
+  height: 500;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+
+
+
+.weldingRobot Link image{
+  /* margin: 5px 15px; */
+  width: 500;
+  height: 500;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+
+
+.WindingRobot Link image{
+  /* margin: 5px 15px; */
+  width: 500;
+  height: 500;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}

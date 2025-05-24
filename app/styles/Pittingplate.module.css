@@ -1,0 +1,15 @@
+.main{
+    width: 500;
+    height: 500;
+    display: flex;
+    align-item: center;
+    justify-content: center;
+}
+
+.plate{
+  width: 500;
+  height: 500;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}

@@ -1,0 +1,35 @@
+//%%%%%%%%%%    نحوه ی استفاده از تصاویر در NEXT JS %%%%%%%%%%%%%%%%
+//%%%%%%%%%%    برای استفاده از تصاویر در NEXT JS, باید تصاویر را در داخل پوشه ی components, و یا پوشه ی public, قرار دهیم و با فراخوانی کردن آن ها در داخل فایل های مختلف با  از import,  آنها را در فایل های مختلف استفاده کنیم %%%%%%%%%%%%%%%%
+import Image from 'next/image';
+import Link from 'next/link';
+
+import productsStyles from '../../styles/Products.module.css';
+
+import LinearAccelatorImage from '../../components/Accelators.jpg';
+// import LinearAccelatorImage from './../../components/Accelators.jpg';
+
+export default function ParticleLinearAccolator() {
+  return (
+    <main>
+      <h1>محصولات شرکت امیرسام</h1> 
+      <p>  دستگاه شتابدهنده ی خطی ذرات </p> 
+    
+      
+      <nav className={productsStyles.products}>
+        <Link href="/Products">
+          <Image 
+            src={LinearAccelatorImage}
+            alt='amirsam-companys LinearAccelator Image'
+            width={500}
+            height={500}
+            quality={100}
+            placeholder='blur'
+          />
+        </Link>
+                    
+      </nav>
+
+    </main>
+  )
+}
+

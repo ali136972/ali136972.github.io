@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background: #ebf0fa;
+}
+
+
+/* main tags styles*/
+
+main{
+  @apply bg-blue-200;
+
+}
+
+/* main h1{
+  background: white;
+} */
+
+
+
+/* pill class styles*/
+.pill{
+  @apply py-1 px-2 inline-block text-xs font-semibold;
+}
+
+.pill.high{
+  @apply bg-red-300 text-red-600;
+}
+
+
+.pill.medium{
+  @apply bg-blue-300 text-red-600;
+}
+
+.pill.low{
+  @apply bg-emerald-300 text-red-600;
+}
+
+
+
+/* card class styles*/
+
+.card{
+  @apply bg-blue-100 text-blue-600;
+}
+
+.card .pill{
+  @apply absolute bottom-0 right-0 rounded-tl-md rounded-tr-md;
+}
+

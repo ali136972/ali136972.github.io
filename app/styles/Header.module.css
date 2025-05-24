@@ -1,0 +1,27 @@
+.main{
+  height: 110px;
+  width: 100%;
+  color: red;
+  background-color: white;
+  text-align: center;
+}
+
+
+.main .title {
+  color: red;
+  background-color: white;
+  text-size: 30px;
+}
+
+
+.main .title span{
+  color: black;
+  text-size: 16px;
+}
+
+
+.main .description{
+  color: blue;
+  background-color: white;
+  text-size: 20px;
+}
