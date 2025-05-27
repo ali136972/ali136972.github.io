@@ -11,6 +11,9 @@ jobs:
     run: npm install npm
   - name: Build project assets
     run: npm run build
+  - name: Deploy
+    run: npm run deploy
+    
   
 
 
