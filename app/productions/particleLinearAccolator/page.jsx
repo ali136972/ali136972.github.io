@@ -5,8 +5,7 @@ import Link from 'next/link';
 
 import productsStyles from '../../styles/Products.module.css';
 
-import LinearAccelatorImage from '../../components/Accelators.jpg';
-// import LinearAccelatorImage from './../../components/Accelators.jpg';
+// import LinearAccelatorImage from '../../../public/Accelators.png';
 
 export default function ParticleLinearAccolator() {
   return (
@@ -16,14 +15,14 @@ export default function ParticleLinearAccolator() {
     
       
       <nav className={productsStyles.products}>
-        <Link href="/Products">
+        <Link href="/Products" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
-            src={LinearAccelatorImage}
+            src={'/Accelators.jpg'}
             alt='amirsam-companys LinearAccelator Image'
             width={500}
             height={500}
             quality={100}
-            placeholder='blur'
+            className='rounded-xl'
           />
         </Link>
                     

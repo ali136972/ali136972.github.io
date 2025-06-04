@@ -19,7 +19,7 @@ export default async function EmployersList() {
     <>
       {
         employers.map((employer)=>(
-          <div Key={employer.id} className='card my-5'>
+          <div key={employer.id} className='card my-5'>
             <Link href={`/employers/${employer.id}`} >
               <h3>{employer.name}</h3>
               <p>{employer.discription.slice(0, 60)}...</p>
@@ -27,15 +27,14 @@ export default async function EmployersList() {
                 {employer.priority} priority
               </div>
             </Link>
-          </div>
-          
+          </div> 
         ))
       }
 
       {
-        employers.length === 0 && (
-          <p className='text-center'> There are No Employers</p>
-        )
+          employers.length === 0 && (
+            <p className='text-center'> There are No Employers</p>
+          )
       }
     </>
   )

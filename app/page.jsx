@@ -32,7 +32,7 @@
     //%%%%%%%%%%  بعد از نصب پکیج json-server, برای راه اندازی این پکیج باید در داخل ترمینال vs code, کد  npx json-server --watch --port 4000 ./_data/db.json, را بنویسیم تا بر روی پورت 4000 json-server, ما اجرا شود و داده های داخل فایل db.json, را که در داخل آدرس ./_data/db.json, می باشند را دریافت کرده و بر ای آنها یک url, ایجاد کند و م با استفاده از این url, می توانیم از داخل هر فایلی همانند فایل page.jsx, ..., به این url,requist, زده و داده ها را از داخل فایل db.json, با استفاده از متد fetch('url addresses'), یا fetch('http://localhost:4000/employers'), گرفته و در داخل فایل page.jsx, ..., استفاده کنیم و از قبل می دانیم که، برنامه ی ما نیز بر روی پورت 3000 از قبل  با استفاده از کدهای npm run dev,  در داخل  ترمینال vs code, اجرا می شد 
 
 
-    import Head from 'next/head';
+    // import Head from 'next/head';
 
   //%%%%%%%%%%*********    نحوه ی دریافت داده یا Data Fetching, در داخل , NEXT JS  ********* %%%%%%%%%%%%%%%%
     //%%%%%%%%%% در ابتدا باید به یاد بیاوریم که از قبل می دانیم که در Next js, ما دو نوع روتر داریم 
@@ -74,6 +74,9 @@
         //%%%%%%% in `app` directory in page.jsx or each other files
           // This function can be named anything
           async function getProjects() {
+            //adding More Delay
+            await new Promise(resolve=>setTimeout(resolve,3000));
+
             const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
             const projects = await res.json()   
             return projects
@@ -109,6 +112,13 @@
 
 
 
+          //%%%%%% <Head> components in Nextjs websites Description in browsers search box 
+          export const metadata ={
+              title:'AMIRSAM-COMPANY Pages',
+              description:'AMIRSAM-COMPANY Pages description'
+          }
+
+
 
 export default async function Home({ params }) {
   const projects = await getProjects();
@@ -124,10 +134,10 @@ export default async function Home({ params }) {
   return (
     <div>
       
-      <Head>
+      {/* <Head>
         <title>AMIRSAM_COMPANY-Home</title>
         <meta name="keywords" content="AMIRSAM_COMPANY, Iranian, persian, InductrialCompany, Full Automatic Welding& Winding machine, Olove Pitting & Slicing Machine, Cascade, Linear Particle Accelator" />
-      </Head>
+      </Head> */}
 
       <h1>Welcome to AMIRSAM_COMPANY Guys!</h1> 
       <h2>Home</h2> 

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import olivePittingMachineStyles from '../../styles/Products.module.css';
 
-import OlivePittingMachineImage from '../../components/Olive pitting Machine.png';
+// import OlivePittingMachineImage from '../../../public/Olive pitting Machine.jpg';
 
 export default function OlivePittingMachine() {
   return (
@@ -13,14 +13,14 @@ export default function OlivePittingMachine() {
       <p> دستگاه های هسته گیر و اسلایس زن زیتون </p> 
 
       <nav className={olivePittingMachineStyles.pitting}>
-        <Link href="/Products">
+        <Link href="/Products" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
-            src={OlivePittingMachineImage}
+            src={'/Olive pitting Machine.jpg'}
             alt='amirsam-companys OlivePittingMachine Image'
             width={500}
             height={500}
             quality={100}
-            placeholder='blur'
+            className='rounded-xl'
           />
         </Link>
                     

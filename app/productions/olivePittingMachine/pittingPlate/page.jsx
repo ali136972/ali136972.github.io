@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import pittingPlateImage from '../../../components/pittingPlateImage.jpg';
+// import pittingPlateImage from '../../../../public/pittingPlateImage.jpeg';
 import pittingplateStyles from '../../../styles/Pittingplate.module.css'
 
 export default function Pittingplate() {
@@ -14,12 +14,11 @@ export default function Pittingplate() {
         <nav className={pittingplateStyles.plate}>
           <Link href="/productions/olivePittingMachine/pittingPlate">
             <Image 
-                    src={pittingPlateImage}
+                    src={'/pittingPlateImage.jpg'}
                     alt='amirsam-companys olivePittingmachine pittingPlate Image'
                     width={500}
                     height={500}
                     quality={100}
-                    placeholder='blur'
             />
           </Link>
                    

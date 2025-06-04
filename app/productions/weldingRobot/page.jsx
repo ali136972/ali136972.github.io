@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-import weldingRobotImage from '../../components/Cascade.jpg';
+// import weldingRobotImage from '../../../public/weldingRobot.jpg';
 import weldingRobotStyles from '../../styles/Products.module.css';
 
 export default function WeldingRobot() {
@@ -15,14 +15,14 @@ export default function WeldingRobot() {
       
       <nav className={weldingRobotStyles.weldingRobot}>
       
-        <Link href="/productins">
+        <Link href="/productins" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
-            src={weldingRobotImage}
+            src={'/weldingRobot.jpg'}
             alt='amirsam-companys weldingRobot Image'
             width={500}
             height={500}
             quality={100}
-            placeholder='blur'
+            className='rounded-xl'
           />
         </Link>
             

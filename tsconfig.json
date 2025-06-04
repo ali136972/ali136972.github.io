@@ -20,15 +20,20 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "ES2017"
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "app/page.jsx", "app/_document.js"  ],
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/_document.js",
+    "app/client/page.tsx",
+    "app/page.jsx",
+    "next-env.d.ts",
+    "./dist/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }

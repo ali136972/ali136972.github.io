@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-import windingRobotImage from '../../components/Cascade.jpg';
+// import windingRobotImage from '../../../public/Cascade.jpeg';
 import windingRobotStyles from '../../styles/Products.module.css';
 
 
@@ -16,14 +16,14 @@ export default function Productions() {
 
       <nav className={windingRobotStyles.windingRobot}>
       
-        <Link href="/productins">
+        <Link href="/productins" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
-            src={windingRobotImage}
+            src={'/windingRobotImage.jpg'}
             alt='amirsam-companys windingRobot Image'
             width={500}
             height={500}
             quality={100}
-            placeholder='blur'
+            className='rounded-xl'
           />
         </Link>
             
