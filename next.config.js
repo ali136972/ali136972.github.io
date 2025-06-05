@@ -54,4 +54,7 @@ module.exports = {
     return config;
   },
   allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+  distDir: 'dist',
+  images: { unoptimized: true },
+
 };

@@ -1,4 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js"
+  "/users/page": "app/users/page.js",
+  "/productions/particleLinearAccolator/page": "app/productions/particleLinearAccolator/page.js",
+  "/productions/weldingRobot/page": "app/productions/weldingRobot/page.js",
+  "/productions/windingRobot/page": "app/productions/windingRobot/page.js",
+  "/productions/olivePittingMachine/page": "app/productions/olivePittingMachine/page.js"
 }

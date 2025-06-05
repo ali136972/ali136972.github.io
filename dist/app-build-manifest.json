@@ -21,10 +21,69 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/_not-found/page": [
+    "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/about/page.js"
+    ],
+    "/create/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/create/page.js"
+    ],
+    "/employers/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/employers/not-found.js"
+    ],
+    "/employers/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/employers/page.js"
+    ],
+    "/users/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/users/not-found.js"
+    ],
+    "/users/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/users/page.js"
+    ],
+    "/news/latestNews/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/news/latestNews/page.js"
+    ],
+    "/productions/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/productions/not-found.js"
+    ],
+    "/productions/particleLinearAccolator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/productions/particleLinearAccolator/page.css",
+      "static/chunks/app/productions/particleLinearAccolator/page.js"
+    ],
+    "/productions/weldingRobot/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/productions/weldingRobot/page.css",
+      "static/chunks/app/productions/weldingRobot/page.js"
+    ],
+    "/productions/windingRobot/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/productions/windingRobot/page.css",
+      "static/chunks/app/productions/windingRobot/page.js"
+    ],
+    "/productions/olivePittingMachine/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/productions/olivePittingMachine/page.css",
+      "static/chunks/app/productions/olivePittingMachine/page.js"
     ]
   }
 }

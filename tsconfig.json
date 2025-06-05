@@ -26,14 +26,15 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "./dist/types/**/*.ts",
     ".next/types/**/*.ts",
     "app/_document.js",
     "app/client/page.tsx",
     "app/page.jsx",
     "next-env.d.ts",
-    "./dist/types/**/*.ts"
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
-  ],
+  ]
 }
