@@ -47,14 +47,15 @@
 module.exports = {
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push({
+      output: 'export',
       test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.jpg$/, /\.png$/],
-      loader: require.resolve("url-loader")
+      loader: require.resolve("url-loader"),
+      allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+      distDir: 'dist',
+      images: { unoptimized: true },
     });
 
     return config;
-  },
-  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
-  distDir: 'dist',
-  images: { unoptimized: true },
+  }
 
 };

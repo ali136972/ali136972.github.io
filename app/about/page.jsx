@@ -20,7 +20,7 @@ export default function About() {
                 src={'/ali.jpg'}
                 alt='amirsam-companys Administer Image'
                 width={700}
-                height={700}
+                height= {700}
                 priority= {"high"}
                 className='rounded-xl'
               />
