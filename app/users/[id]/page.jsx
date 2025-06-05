@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   const  res = await fetch('http://localhost:4001/users/');
   const  users =  await res.json();
   return users.map((user)=>({
-    id: users.id,
+    id: user.id,
   }));
 }
 
