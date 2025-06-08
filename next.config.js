@@ -7,9 +7,9 @@ const nextConfig = {
     // basePath:'/https://github.com/ali136972/ali136972.github.io.git',
     // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git/',
   
-  //%%%%%%%%% اگر پروژه ی خود را در داخل زیر شاخه ی مسیر اصلی(subpath) گیت هاب یا همان branch(origin/main),دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
-    // subPath:'repository-name',    
-    // subPath:'/https://github.com/ali136972/ali136972.github.io.git',
+  //%%%%%%%%% اگر پروژه ی خود را در داخل زیر شاخه ی مسیر اصلی(subpath) گیت هاب یا همان branch(origin/main یا ali136972/ali136972.github.io),دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
+    // basePath:'repository-name',    
+    // basePath:'/https://github.com/ali136972/ali136972.github.io.git',
     // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
 }
 module.exports = nextConfig
