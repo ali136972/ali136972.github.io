@@ -98,19 +98,19 @@
 
 
           //%%%%%% (generateStaticParams) in `app` directory, گرفتن داده ها یا اطلاعات از داخل فایلی به نام post-layout.js, که در داخل پوشه ی components قرار دارد
-            import PostLayout from './components/post-layout';         
-              export async function generateStaticParams() {
-                return [{ id: '1' }, { id: '2' }]
-              }
+            // import PostLayout from './components/post-layout';         
+            //   export async function generateStaticParams() {
+            //     return [{ id: '1' }, { id: '2' }]
+            //   }
               
-              async function getPost(params) {
-                //adding More Delay
-                await new Promise(resolve=>setTimeout(resolve,3000));                
-                const res = await fetch(`http://localhost:4000/posts/${params.id}`)
-                const post = await res.json();
+            //   async function getPost(params) {
+            //     //adding More Delay
+            //     await new Promise(resolve=>setTimeout(resolve,3000));                
+            //     const res = await fetch(`http://localhost:4000/posts/${params.id}`)
+            //     const post = await res.json();
               
-                return post;
-              }            
+            //     return post;
+            //   }            
 
 
 
@@ -130,7 +130,7 @@ export default async function Home({ params }) {
   const { slug } = params;
 
   //%%%%%% (generateStaticParams) in `app` directory,
-  const post = await getPost(params);
+  // const post = await getPost(params);
 
 
   return (
@@ -149,9 +149,11 @@ export default async function Home({ params }) {
         projects.map((project) => <div className='text-2xl bg-black text-white font-bold py-2 px-4 my-4 ' key={project.id}>{project.title}</div>)
       }
 
-      {
+ 
+      {/* {
         <PostLayout post={post} />
-      }
+      } */}
+
 
     </div>
   )

@@ -2,12 +2,9 @@
 const nextConfig = {
   output: 'export', // Outputs a Single-Page Application (SPA).
   images: { unoptimized: true },
-  //%%%%%%%%% اگر پروژه ی خود را در داخل مسیر اصلی گیت هاب یا همان main,دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
-    //%%%%% basePath:'repository-name',
-    // basePath:'/https://github.com/ali136972/ali136972.github.io.git',
-    // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git/',
-  
-  //%%%%%%%%% اگر پروژه ی خود را در داخل زیر شاخه ی مسیر اصلی(subpath) گیت هاب یا همان branch(origin/main یا ali136972/ali136972.github.io),دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
+  //%%%%%%%% خروجی پیش فرض پروژه ی مادر Nextjs 15, بصورت پیش فرض ،در داخل مسیر _next/static ,ذخیره می شود  %%%%%%%%
+    //%%%%%%% path:'_next/static' 
+  //%%%%%%%%% اگر بخواهیم پروژه ی خود را در داخل یک پوشه یا مسیر فرعی دیگری همانند ریپوزیتوری گیت هاب خودمان ذخیره کنیم باید (ali136972/ali136972.github.io),باید کد زیر را اضافه کنیم %%%%%%%%
     // basePath:'repository-name',    
     // basePath:'/https://github.com/ali136972/ali136972.github.io.git',
     // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
