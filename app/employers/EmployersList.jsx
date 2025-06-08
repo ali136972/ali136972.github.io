@@ -5,7 +5,7 @@ async function getEmployers(){
   //adding More Delay
    await new Promise(resolve=>setTimeout(resolve,3000));
       
-   const  res = await fetch('http://localhost:4000/employers/', {
+   const  res = await fetch('http://localhost:4000/employers', {
     next:{
       revalidate: 2
     }
