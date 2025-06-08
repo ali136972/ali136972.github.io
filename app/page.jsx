@@ -106,7 +106,7 @@
               async function getPost(params) {
                 //adding More Delay
                 await new Promise(resolve=>setTimeout(resolve,3000));                
-                const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+                const res = await fetch(`http://localhost:4000/posts/${params.id}`)
                 const post = await res.json();
               
                 return post;
