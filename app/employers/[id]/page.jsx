@@ -49,7 +49,7 @@ export default async function EmployerDetails({params}) {
         <h1>EmployerDetails</h1> 
       </nav>
 
-      <div Key={employer.id} className='card my-5'>
+      <div key={employer.id} className='card my-5'>
           <h3>{employer.name}</h3>
           <small>Created By {employer.email}</small>
           <p>{employer.discription}</p>

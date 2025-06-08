@@ -49,7 +49,7 @@ export default async function usersDetails({params}) {
         <h1>UserDetails</h1> 
       </nav>
 
-      <div Key={user.id} className='card my-5'>
+      <div key={user.id} className='card my-5'>
           <h3>{user.name}</h3>
           <p>{user.body}</p>
 
