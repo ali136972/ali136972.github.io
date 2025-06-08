@@ -35,6 +35,10 @@
     "dist/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+  ],
+  // "paths": {
+  //   "@/*": ["./*"],
+  //   "/*": ["./node_modules/*"]
+  // }
 }

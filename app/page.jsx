@@ -77,7 +77,7 @@
             //adding More Delay
             await new Promise(resolve=>setTimeout(resolve,3000));
 
-            const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
+            const res = await fetch('http://localhost:4000/projects')
             const projects = await res.json()   
             return projects
           }
@@ -104,7 +104,9 @@
               }
               
               async function getPost(params) {
-                const res = await fetch(`https://jsonplaceholder.typicode.com/${params.id}`)
+                //adding More Delay
+                await new Promise(resolve=>setTimeout(resolve,3000));                
+                const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
                 const post = await res.json();
               
                 return post;
@@ -144,7 +146,7 @@ export default async function Home({ params }) {
       <p>AMIRSAM-COMPANY is once of hightech company in made of the industerial full automatic Robots</p> 
 
       {
-        projects.map((project) => <div key={project.id}>{project.title}</div>)
+        projects.map((project) => <div className='text-2xl bg-black text-white font-bold py-2 px-4 my-4 ' key={project.id}>{project.title}</div>)
       }
 
       {

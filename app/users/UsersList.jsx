@@ -5,7 +5,7 @@ async function getUsers(){
   //adding More Delay
    await new Promise(resolve=>setTimeout(resolve,3000));
       
-   const  res = await fetch('http://localhost:4001/users', {
+   const  res = await fetch('http://localhost:4000/users', {
     next:{
       revalidate: 2
     }

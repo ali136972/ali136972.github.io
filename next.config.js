@@ -1,42 +1,47 @@
-// const { DESTRUCTION } = require('dns')
+const { DESTRUCTION } = require('dns');
 
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-
-
-//   // output: 'export', // Outputs a Single-Page Application (SPA).
-//   // distDir: './dist', // Changes the build output directory to `./dist/
-//   images: { unoptimized: true },
-//   compiler: {
-//     styledComponents: true,
-//   },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
 
 
+  // output: 'export', // Outputs a Single-Page Application (SPA).
+  // distDir: './dist', // Changes the build output directory to `./dist/
+  images: { unoptimized: true },
+  compiler: {
+    styledComponents: true,
+  },
 
-//     // rewrites: ()=>{
-//     //     return[
-//     //         {
-//     //         source: "/api/:path*",
-//     //         destination: "http://localhost:3000/api/:path*"
-//     //         }
-//     //     ]
 
-//     // },
 
-//     crossOrigin: 'anonymous',
-//     experimental: {
-//       serverActions: {
-//         // allowedOrigins: ['my-proxy.com', '*.my-proxy.com'],
-//         allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
-//       },
-//     },
+    // rewrites: ()=>{
+    //     return[
+    //         {
+    //         source: "/api/:path*",
+    //         destination: "http://localhost:3000/api/:path*"
+    //         }
+    //     ]
 
-// }
+    // },
 
-//   // config.module.rules.push(
-//   //       {test: /\.(png|jpeg)$/, loader: 'url-loader?limit=8192'}
-//   //   );
-// module.exports = nextConfig
+    crossOrigin: 'anonymous',
+    experimental: {
+      serverActions: {
+        // allowedOrigins: ['my-proxy.com', '*.my-proxy.com'],
+        allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+      },
+    },
+
+}
+
+  // config.module.rules.push(
+  //       {test: /\.(png|jpeg)$/, loader: 'url-loader?limit=8192'}
+  //   );
+module.exports = nextConfig
+
+
+
+
+
 
 
 // // module.exports = {
@@ -44,18 +49,18 @@
 // // }
 
 
-module.exports = {
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.module.rules.push({
-      output: 'export',
-      test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.jpg$/, /\.png$/],
-      loader: require.resolve("url-loader"),
-      allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
-      distDir: 'dist',
-      images: { unoptimized: true },
-    });
+// module.exports = {
+//   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+//     config.module.rules.push({
+//       output: 'export',
+//       // test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.jpg$/, /\.png$/],
+//       // loader: require.resolve("url-loader"),
+//       // allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+//       distDir: 'dist',
+//       images: { unoptimized: true },
+//     });
 
-    return config;
-  }
+//     return config;
+//   }
 
-};
+// };
