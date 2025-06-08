@@ -1,4 +1,4 @@
-const { DESTRUCTION } = require('dns');
+// const { DESTRUCTION } = require('dns');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,16 +11,14 @@ const nextConfig = {
     //%%%%% basePath:'repository-name',
     basePath:'/https://github.com/ali136972/ali136972.github.io.git',
     assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git/',
-
-
-
+  
   //%%%%%%%%% اگر پروژه ی خود را در داخل زیر شاخه ی مسیر اصلی(subpath) گیت هاب یا همان branch(origin/main),دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
     // subPath:'/https://github.com/ali136972/ali136972.github.io.git',
     // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
     // subPath:'repository-name',
-  compiler: {
-    styledComponents: true,
-  },
+    compiler: {
+      styledComponents: true,
+    },
 
 
 
