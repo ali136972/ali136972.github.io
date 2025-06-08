@@ -4,24 +4,25 @@ const { DESTRUCTION } = require('dns');
 const nextConfig = {
 
 
-  // output: 'export', // Outputs a Single-Page Application (SPA).
+  output: 'export', // Outputs a Single-Page Application (SPA).
   // distDir: './dist', // Changes the build output directory to `./dist/
   images: { unoptimized: true },
+  //%%%%%%%%% اگر پروژه ی خود را در داخل مسیر اصلی گیت هاب یا همان main,دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
+    //%%%%% basePath:'repository-name',
+    basePath:'/https://github.com/ali136972/ali136972.github.io.git',
+    assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
+
+
+
+  //%%%%%%%%% اگر پروژه ی خود را در داخل زیر شاخه ی مسیر اصلی(subpath) گیت هاب یا همان branch(origin/main),دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
+    // subPath:'/https://github.com/ali136972/ali136972.github.io.git',
+    // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
+    // subPath:'repository-name',
   compiler: {
     styledComponents: true,
   },
 
 
-
-    // rewrites: ()=>{
-    //     return[
-    //         {
-    //         source: "/api/:path*",
-    //         destination: "http://localhost:3000/api/:path*"
-    //         }
-    //     ]
-
-    // },
 
     crossOrigin: 'anonymous',
     experimental: {
@@ -32,7 +33,6 @@ const nextConfig = {
     },
 
 }
-
   // config.module.rules.push(
   //       {test: /\.(png|jpeg)$/, loader: 'url-loader?limit=8192'}
   //   );
