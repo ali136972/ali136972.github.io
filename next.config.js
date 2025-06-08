@@ -10,7 +10,7 @@ const nextConfig = {
   //%%%%%%%%% اگر پروژه ی خود را در داخل مسیر اصلی گیت هاب یا همان main,دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
     //%%%%% basePath:'repository-name',
     basePath:'/https://github.com/ali136972/ali136972.github.io.git',
-    assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
+    assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git/',
 
 
 
@@ -24,13 +24,13 @@ const nextConfig = {
 
 
 
-    crossOrigin: 'anonymous',
-    experimental: {
-      serverActions: {
-        // allowedOrigins: ['my-proxy.com', '*.my-proxy.com'],
-        allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
-      },
-    },
+    // crossOrigin: 'anonymous',
+    // experimental: {
+    //   serverActions: {
+    //     // allowedOrigins: ['my-proxy.com', '*.my-proxy.com'],
+    //     allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+    //   },
+    // },
 
 }
   // config.module.rules.push(
