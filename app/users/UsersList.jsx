@@ -21,7 +21,7 @@ export default async function UersList() {
         users.map((user)=>(
           <div key={user.id} className='card my-5'>
             <Link href={`/users/${user.id}`} >
-              <h3>{user.title}</h3>
+              <h3>{user.name}</h3>
               <p>{user.body.slice(0, 60)}...</p>
               <div className={`pill ${user.priority}`}>
                 {user.priority} priority

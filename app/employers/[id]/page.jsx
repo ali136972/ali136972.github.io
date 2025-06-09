@@ -40,8 +40,8 @@ async function getEmployers(id){
 
 
 export default async function EmployerDetails({params}) {
-
-    const employer = await getEmployers(params.id);
+    const {id} = await params;
+    const employer = await getEmployers(id);
   return (
     <main>
 

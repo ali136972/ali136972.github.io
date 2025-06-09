@@ -40,8 +40,8 @@ async function getUsers(id){
 
 
 export default async function usersDetails({params}) {
-
-    const user = await getUsers(params.id);
+    const {id} = await params;
+    const user = await getUsers(id);
   return (
     <main>
 

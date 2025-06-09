@@ -146,7 +146,7 @@ export default async function Home({ params }) {
       <p>AMIRSAM-COMPANY is once of hightech company in made of the industerial full automatic Robots</p> 
 
       {
-        projects.map((project) => <div className='text-2xl bg-black text-white font-bold py-2 px-4 my-4 ' key={project.id}>{project.title}</div>)
+        projects.map((project) => <div className='cool-d-md-flex text-2xl bg-black text-white w-auto h-15 font-bold py-2 px-4 my-4 rounded-full place-content-center' key={project.id}>{project.title}</div>)
       }
 
  
