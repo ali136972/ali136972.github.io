@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React, { Suspense } from 'react';
 
 async function getUsers(){
   //adding More Delay
