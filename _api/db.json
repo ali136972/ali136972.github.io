@@ -46,7 +46,6 @@
       "id": "1",
       "name": "hamidFooladi",
       "discription": "once  of married employers in agricalturing feild",
-      "body": "farmer",
       "priority": "low",
       "email": "www.hamidFooladi123@gmail.com"
     },
@@ -54,7 +53,6 @@
       "id": "2",
       "name": "mohsenFooladi",
       "discription": "once  of married employers in architecting feild",
-      "body": "architecting",
       "priority": "medium",
       "email": "www.mohsenFooladi123@gmail.com"
     },
@@ -62,7 +60,6 @@
       "id": "3",
       "name": "zohrehAfsousi",
       "discription": "once  of married employers in physics feild",
-      "body": "physicist",
       "priority": "high",
       "email": "www.zohrehAfsousi123@gmail.com"
     },
