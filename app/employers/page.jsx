@@ -8,6 +8,7 @@ import Loading from '../loading';
 
 
 export default function Employers() {
+      fallback:true;
   return (
     <main>
       <h1>Employers</h1> 
