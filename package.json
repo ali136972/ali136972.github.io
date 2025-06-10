@@ -18,7 +18,7 @@
     "nmp": "^1.0.3",
     "postcss": "8.4.38",
     "react": "19.1.0",
-    "react-devtools": "^6.1.2",
+    "react-devtools": "^1.0.5",
     "react-dom": "19.1.0",
     "swr": "^2.3.3",
     "tailwindcss": "3.4.3"
