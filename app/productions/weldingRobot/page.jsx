@@ -15,7 +15,7 @@ export default function WeldingRobot() {
       
       <nav className={weldingRobotStyles.weldingRobot}>
       
-        <Link href="/productins" className='bg-blue-100 p-3 flex justify-center items-center'>
+        <Link href="/productions/weldingRobot" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
             src={'/weldingRobot.jpg'}
             alt='amirsam-companys weldingRobot Image'

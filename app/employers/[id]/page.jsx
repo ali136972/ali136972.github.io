@@ -4,7 +4,7 @@ import {notFound} from "next/navigation";
 /* static rendering(static parameters) in Next js, این پارامترها، مثلا: پارامتر استاتیک و ثابت  id, name, ... فقط با یک بار رکوئست زدن به سرور، داده های جیسو را گرفته و در داخل یک متغیر ثابتی به نام id, name,... می ریزیم و در هر جی وبسایتمان که نیاز باشد آنها را فراخوانی کرده و استفاده می کنیم و دیر نیازی به درخواست دادن به سرور برای دریافت این داده ها نیست */
 
 export async function generateStaticParams() {
-  const  res = await fetch('http://localhost:4000/employers');
+  const  res = await fetch('http://localhost:4000/employers/');
   const  employers =  await res.json();
   return employers.map((employer)=>({
     id: employer.id,

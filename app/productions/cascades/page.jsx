@@ -14,7 +14,7 @@ export default function Cascades() {
         <h1>محصولات شرکت امیرسام</h1> 
         <p>  کسکید های دستگاه رنگ پودری </p> 
 
-        <Link href="/productins" className='bg-blue-100 p-3 flex justify-center items-center'>
+        <Link href="/productions/cascades" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
             src={'/Cascade.jpg'}
             alt='amirsam-companys Cascade Image'

@@ -15,7 +15,7 @@ export default function ParticleLinearAccolator() {
     
       
       <nav className={productsStyles.products}>
-        <Link href="/Products" className='bg-blue-100 p-3 flex justify-center items-center'>
+        <Link href="/productions/particleLinearAccolator" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
             src={'/Accelators.jpg'}
             alt='amirsam-companys LinearAccelator Image'

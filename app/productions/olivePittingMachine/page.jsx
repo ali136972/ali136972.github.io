@@ -13,7 +13,7 @@ export default function OlivePittingMachine() {
       <p> دستگاه های هسته گیر و اسلایس زن زیتون </p> 
 
       <nav className={olivePittingMachineStyles.pitting}>
-        <Link href="/Products" className='bg-blue-100 p-3 flex justify-center items-center'>
+        <Link href="/productions/olivePittingMachine" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
             src={'/Olive pitting Machine.jpg'}
             alt='amirsam-companys OlivePittingMachine Image'

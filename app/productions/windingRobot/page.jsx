@@ -16,7 +16,7 @@ export default function Productions() {
 
       <nav className={windingRobotStyles.windingRobot}>
       
-        <Link href="/productins" className='bg-blue-100 p-3 flex justify-center items-center'>
+        <Link href="/productions/windingRobot" className='bg-blue-100 p-3 flex justify-center items-center'>
           <Image 
             src={'/windingRobotImage.jpg'}
             alt='amirsam-companys windingRobot Image'
