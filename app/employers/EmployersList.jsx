@@ -2,8 +2,6 @@ import Link from "next/link";
 import React from 'react';
 
 async function getEmployers(){
-  // //get params dynamicaly if cant get its staticly
-  //     fallback:true;
   //adding More Delay
    await new Promise(resolve=>setTimeout(resolve,3000));
       
