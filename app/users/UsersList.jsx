@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { Suspense } from 'react';
 
 async function getUsers(){
-      fallback:true;
   //adding More Delay
    await new Promise(resolve=>setTimeout(resolve,3000));
       

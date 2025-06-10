@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Outputs a Single-Page Application (SPA).
+  output: 'export', // Outputs a Single-Page Application (SPA).
   images: { unoptimized: true },
   //%%%%%%%% خروجی پیش فرض پروژه ی مادر Nextjs 15, بصورت پیش فرض ،در داخل مسیر _next/static ,ذخیره می شود  %%%%%%%%
     //%%%%%%% path:'_next/static' 

@@ -13,7 +13,6 @@ import {notFound} from "next/navigation";
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
-    fallback:true;
     const  res = await fetch('http://localhost:4000/users');
     const  users =  await res.json();
     return users.map((user)=>({

@@ -16,7 +16,6 @@ import {notFound} from "next/navigation";
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
-    fallback:true;
     const  res = await fetch('http://localhost:4000/employers');
     const  employers =  await res.json();
     return employers.map((employer)=>({

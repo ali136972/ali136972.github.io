@@ -3,7 +3,6 @@ import UsersList from './UsersList';
 import Loading from '../loading';
 
 export default function Users() {
-      fallback:true;
   return (
     <main>
       <h1>Users</h1> 
