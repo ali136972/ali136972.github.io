@@ -26,6 +26,7 @@ export async function generateStaticParams() {
     return employers.map((employer)=>({
       // id: employer.id.toString,
       id: employer.id,
+      revalidate:60
     }));
   }catch(error){
     console.error('Failed to fetch employers:',error);

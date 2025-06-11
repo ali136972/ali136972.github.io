@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // reactStrictMode: true,
+  // experimental:{
+  //   appDir:true,
+  // },
   // dynamic :'force-static',//convert Dynamic Routes(SSR or Server-Side-Rendering) with using GenerateStaticParams, to Static-rendering
   output: 'export', // Outputs a Single-Page Application (SPA) or Static-pages without Dynamic Routes.
   // distDir: 'dist',
