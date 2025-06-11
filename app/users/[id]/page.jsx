@@ -21,7 +21,7 @@ export async function generateStaticParams() {
     return users.map((user)=>({
       // id: user.id.toString,
       id: user.id,
-      revalidate:60
+      // revalidate:60
     }));
   }catch(error){
     console.error('Failed to fetch users:',error);
