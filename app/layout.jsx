@@ -24,9 +24,9 @@ const vazirFont = localFont({
 
 
 //%%%%%% components %%%%%%%%%
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Navbar from './content/Navbar';
+import Header from './content/Header';
+import Footer from './content/Footer';
 
 //%%%%%%%%%%    نحوه ی استفاده از تصاویر در NEXT JS %%%%%%%%%%%%%%%%
 //%%%%%%%%%%    برای استفاده از تصاویر در NEXT JS, باید تصاویر را در داخل پوشه ی components, و یا پوشه ی public, قرار دهیم و با فراخوانی کردن آن ها در داخل فایل های مختلف با  از import,  آنها را در فایل های مختلف استفاده کنیم %%%%%%%%%%%%%%%%

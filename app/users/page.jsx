@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import UsersList from './UsersList';
-import Loading from '../loading';
+import Loading from '../content/loading';
 
 export default function Users() {
   return (

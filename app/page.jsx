@@ -34,83 +34,87 @@
 
     // import Head from 'next/head';
 
-  //%%%%%%%%%%*********    نحوه ی دریافت داده یا Data Fetching, در داخل , NEXT JS  ********* %%%%%%%%%%%%%%%%
-    //%%%%%%%%%% در ابتدا باید به یاد بیاوریم که از قبل می دانیم که در Next js, ما دو نوع روتر داریم 
+  //%%%%%%%%%%***************** نحوه ی دریافت داده یا Data Fetching, در داخل , NEXT JS  ************%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    //%%%%%%%%%%********* در ابتدا باید به یاد بیاوریم که از قبل می دانیم که در Next js, ما دو نوع روتر داریم:Page Router, App Router ************%%%%%
       //%%%%%%%%%% 1. page Router, در نسخه های قبل از نسخه ی 13 Next js, از این نوع روت گذاری استفاده می شد بصورتی که ما باید برای ایجاد روت های مختلف یک وبسایت، ابتدا یک پوشه ای به نام pages, ایجاد کنیم و روت های مختلف وبسایت را در داخل پوشه هایی به همین نام هایی که می خواهیم روت ایجاد کنیم ، ایجاد کرده و در داخل هر کدام از این روت ها کدهای مربوزط به هر روت را در داخل فایلی به نام index.js یا index.ts, بصورت کامپوننت ری اکتی، ایجاد کنیم 
         //%%%%%******** مثلا برای ایجاد روت '/employers', باید یک پووشه ای به نام pages, ایجاد کنیم و در داخل این پوشه، پوشه ای به ام employers, ایجاد کرده و در داخل این پوشه کامپوننت Employers, را در داخل فالی به نام index.js, یا index.ts, بسازیم
-      //%%%%%%%%%% . app Router, در نسخه های بعد از نسخه ی 13 Next js, از این نوع روت گذاری استفاده می شد بصورتی که ما باید برای ایجاد روت های مختلف یک وبسایت، ابتدا یک پوشه ای به نام app, ایجاد کنیم و روت های مختلف وبسایت را در داخل پوشه هایی به همین نام هایی که می خواهیم روت ایجاد کنیم ، ایجاد کرده و در داخل هر کدام از این روت ها کدهای مربوط به هر روت را در داخل فایلی به نام page.js یا page.ts, بصورت کامپوننت ری اکتی، ایجاد کنیم 
+      //%%%%%%%%%% 2. app Router, در نسخه های بعد از نسخه ی 13 Next js, از این نوع روت گذاری استفاده می شد بصورتی که ما باید برای ایجاد روت های مختلف یک وبسایت، ابتدا یک پوشه ای به نام app, ایجاد کنیم و روت های مختلف وبسایت را در داخل پوشه هایی به همین نام هایی که می خواهیم روت ایجاد کنیم ، ایجاد کرده و در داخل هر کدام از این روت ها کدهای مربوط به هر روت را در داخل فایلی به نام page.js یا page.ts, بصورت کامپوننت ری اکتی، ایجاد کنیم 
         //%%%%%%******** مثلا برای ایجاد روت '/employers', باید یک پووشه ای به نام app, ایجاد کنیم و در داخل این پوشه، پوشه ای به ام employers, ایجاد کرده و در داخل این پوشه کامپوننت Employers, را در داخل فالی به نام page.js, یا page.ts, بسازیم
 
-    //%%%%%%%%%%*********    متدهای مختلفی برای  دریافت داده یا Data Fetching, در داخل , NEXT JS وجود دارند که از جمله ی آنها  می توان به متدهای export const getStaticProps = async()=>{}, export const getServerSideProps = async()=>{}, export const getStaticPath = async()=>{},... اشاره کرد که به صورت های زیر در داخل فایل <html></html>, استفاده می شوند ********* %%%%%%%%%%%%%%%%
-    //%%%%%%%%%%%%%%% دو راه مختلف برای ایجاد گرفتن وبسایت ها یا داده های استاتیک، داینامیک و گرفتن داده یا پیج یک وبسایت از مسیرهای یا روت های مختلف  در داخل next js, وجود دارد%%%%%%%%%%%
-      //%%%%%%% 1. اگر فایل اصلی وبسایت یعنی index.js یا index.ts,  در داخل پوشه ی pages, در داخل next js, ایجاد شده باشد که به آن اصطلاحا page directory, می گویند در اینصورت برای گرفتن داده یا صفحات داینامیک یا استاتیک وبسایت باید به شکل زیر به سه روش زیر اقدام کرد
+    //%%%%%%%%%%*********    متدهای مختلفی برای  دریافت داده یا Data Fetching, در داخل , NEXT JS وجود دارند که از جمله ی آنها  می توان به متدهای export const getStaticProps = async()=>{}, export const getServerSideProps = async()=>{}, export const getStaticPath = async()=>{}, export const generateStaticParams = async()=>{},... اشاره کرد که به صورت های زیر در داخل فایل <html></html>, استفاده می شوند ********* %%%%%%%%%%%%%%%%
+      //%%%%%%%%%%%%%%%%%%************************* export const getStaticPath = async()=>{} و export const getStaticProps = async()=>{}, فقط در داخل page Routers, که مربوط به next 13,  به قبل می باشد کار می کنند و برای تولید روت های استاتیک static Routes, مناسب می باشند **********************%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      //%%%%%%%%%%%%%%%%%%************************* export const generateStaticParams = async()=>{}, فقط در داخل App Routers, که مربوط به next 13,  به بعد می باشد کار می کنند و برای تولید روت های استاتیک static Routes, مناسب می باشند **********************%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      //%%%%%%%%%%%%%%%%%%************************* getServerSideProps = async()=>{}, هم در داخل page Routers,  و هم در داخل App Routers, کار می کنند و برای تولید روت های داینامیک Dynamic Routes, مناسب می باشند **********************%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        //%%%%%%%%%%%%%%%************************* دو راه مختلف برای ایجاد گرفتن وبسایت ها یا داده های استاتیک، داینامیک و گرفتن داده یا پیج یک وبسایت از مسیرهای یا روت های مختلف  در داخل next js, وجود دارد************************************%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        //%%%%%%% 1. اگر فایل اصلی وبسایت یعنی index.js یا index.ts,  در داخل پوشه ی pages, در داخل next js, ایجاد شده باشد که به آن اصطلاحا page directory, می گویند در اینصورت برای گرفتن داده یا صفحات داینامیک یا استاتیک وبسایت باید به شکل زیر به سه روش زیر اقدام کرد
 
-        //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* Static Site Generation (getStaticProps) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-          // این متد getStaticProps(),در زمانی که کل پیج ساخته می شود یا زمان build time, درخواست را اجرا می کند و بعد از اجرای آن، ما می توانیم از این متد بعنوان props, در داخل  آرگومان تابع اصلی یا کامپوننت Home(), از آن استفاده کنیم 
-          //%%%% ما در اینجا با استفاده از یک داده ی api, json, که در داخل لینک وبسایت https://jsonplaceholder.typicode.com/posts, قرار دارد و یک متد post(), برای سرور ایجاد می کنیم و با استفاده از متد getInitialProps(), در داخل next js, این داده ها را به سمت سرور می فرستیم و با استفاده از متد fetch(), آن را دریافت کرده و در پاسخ به کابر ارسال می کنیم و چون تعدادآرایه های فایل json, خیلی زیاد است پس ما با استفاده ز ?_limit=6, فقط 6 تا از آرایه های داخل فایل json, مورد نظر را در پاسخ به درخواست کاربر ارسال می کنیم 
-            // export const getStaticProps = async()=>{
-            //   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-            //   const articles = await response.json();
-            //   return{
-            //     props:{articles}
-            //   }
-            // }
-
-          //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* every requist (getServerSideProps) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            // این متد در هر درخواستی که فرانت اند به سرور می دهد یا زمان every requist, درخواست را اجرا می کند و بعد از اجرای آن، ما می توانیم از این متد بعنوان props, در داخل  آرگومان تابع اصلی یا کامپوننت Home(), از آن استفاده کنیم 
-              // export const getServerSideProps = async()=>{
+          //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* Static Site Generation (getStaticProps) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            // این متد getStaticProps(),در زمانی که کل پیج ساخته می شود یا زمان build time, درخواست را اجرا می کند و بعد از اجرای آن، ما می توانیم از این متد بعنوان props, در داخل  آرگومان تابع اصلی یا کامپوننت Home(), از آن استفاده کنیم 
+            //%%%% ما در اینجا با استفاده از یک داده ی api, json, که در داخل لینک وبسایت https://jsonplaceholder.typicode.com/posts, قرار دارد و یک متد post(), برای سرور ایجاد می کنیم و با استفاده از متد getInitialProps(), در داخل next js, این داده ها را به سمت سرور می فرستیم و با استفاده از متد fetch(), آن را دریافت کرده و در پاسخ به کابر ارسال می کنیم و چون تعدادآرایه های فایل json, خیلی زیاد است پس ما با استفاده ز ?_limit=6, فقط 6 تا از آرایه های داخل فایل json, مورد نظر را در پاسخ به درخواست کاربر ارسال می کنیم 
+              // export const getStaticProps = async()=>{
               //   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-
-              // };
-
-          //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* (getStaticPaths) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            // این متد بصورت داینامیک یا پویا، مسیرها یا یو آر ال ، ما را زمانی که ساخت اپلیکیشن ما تمام شده است تولید می کند یا dynamicaly generate paths, درخواست را اجرا می کند و بعد از اجرای آن، ما می توانیم از این متد بعنوان props, در داخل  آرگومان تابع اصلی یا کامپوننت Home(), از آن استفاده کنیم 
-              // export const getStaticPaths = async()=>{
-              //   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-
-              // };
-
-      //%%%%%%% 2. اگر فایل اصلی وبسایت یعنی page.js یا page.ts,  در داخل پوشه ی app, در داخل next js, ایجاد شده باشد که به آن اصطلاحا app directory(Next application), می گویند در اینصورت برای گرفتن داده یا صفحات داینامیک یا استاتیک وبسایت باید به شکل زیر به سه روش زیر اقدام کرد          
-        //%%%%%%% in `app` directory in page.jsx or each other files
-          // This function can be named anything
-          async function getProjects() {
-            //adding More Delay
-            await new Promise(resolve=>setTimeout(resolve,3000));
-
-            const res = await fetch('http://localhost:4000/projects')
-            const projects = await res.json()   
-            return projects
-          }
-
-
-        //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* (generateStaticParams) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-          //%%%%%%%%%  generateStaticParams, in app/blog/[slug]/page.js directory, خیلی شبیه به getStaticPaths, در داخل page directory, می باشد 
-          //%%%%%%%%% The generateStaticParams function can be used in combination with dynamic route segments to statically generate routes at build time instead of on-demand at request time.
-          // Return a list of `params` to populate the [slug] dynamic segment
-              // export async function generateStaticParams() {
-              //   const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json())
-              
-              //   return posts.map((post) => ({
-              //     slug: post.slug,
-              //   }))
+              //   const articles = await response.json();
+              //   return{
+              //     props:{articles}
+              //   }
               // }
 
+            //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* every requist (getServerSideProps) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+              // این متد در هر درخواستی که فرانت اند به سرور می دهد یا زمان every requist, درخواست را اجرا می کند و بعد از اجرای آن، ما می توانیم از این متد بعنوان props, در داخل  آرگومان تابع اصلی یا کامپوننت Home(), از آن استفاده کنیم 
+                // export const getServerSideProps = async()=>{
+                //   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
+
+                // };
+
+            //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* (getStaticPaths) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+              // این متد بصورت داینامیک یا پویا، مسیرها یا یو آر ال ، ما را زمانی که ساخت اپلیکیشن ما تمام شده است تولید می کند یا dynamicaly generate paths, درخواست را اجرا می کند و بعد از اجرای آن، ما می توانیم از این متد بعنوان props, در داخل  آرگومان تابع اصلی یا کامپوننت Home(), از آن استفاده کنیم 
+                // export const getStaticPaths = async()=>{
+                //   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
+
+                // };
+
+        //%%%%%%% 2. اگر فایل اصلی وبسایت یعنی page.js یا page.ts,  در داخل پوشه ی app, در داخل next js, ایجاد شده باشد که به آن اصطلاحا app directory(Next application), می گویند در اینصورت برای گرفتن داده یا صفحات داینامیک یا استاتیک وبسایت باید به شکل زیر به سه روش زیر اقدام کرد          
+          //%%%%%%% in `app` directory in page.jsx or each other files
+            // This function can be named anything
+            async function getProjects() {
+              //adding More Delay
+              await new Promise(resolve=>setTimeout(resolve,3000));
+
+              const res = await fetch('http://localhost:4000/projects')
+              const projects = await res.json()   
+              return projects
+            }
 
 
-          //%%%%%% (generateStaticParams) in `app` directory, گرفتن داده ها یا اطلاعات از داخل فایلی به نام post-layout.js, که در داخل پوشه ی components قرار دارد
-            // import PostLayout from './components/post-layout';         
-            //   export async function generateStaticParams() {
-            //     return [{ id: '1' }, { id: '2' }]
-            //   }
-              
-            //   async function getPost(params) {
-            //     //adding More Delay
-            //     await new Promise(resolve=>setTimeout(resolve,3000));                
-            //     const res = await fetch(`http://localhost:4000/posts/${params.id}`)
-            //     const post = await res.json();
-              
-            //     return post;
-            //   }            
+          //%%%%%%%%%%%%%%%%%%%%%%%%%%%******* (generateStaticParams) in page directory in Next js******%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            //%%%%%%%%%  generateStaticParams, in app/blog/[slug]/page.js directory, خیلی شبیه به getStaticPaths, در داخل page directory, می باشد 
+            //%%%%%%%%% The generateStaticParams function can be used in combination with dynamic route segments to statically generate routes at build time instead of on-demand at request time.
+            // Return a list of `params` to populate the [slug] dynamic segment
+                // export async function generateStaticParams() {
+                //   const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json())
+                
+                //   return posts.map((post) => ({
+                //     slug: post.slug,
+                //   }))
+                // }
+
+
+
+            //%%%%%% (generateStaticParams) in `app` directory, گرفتن داده ها یا اطلاعات از داخل فایلی به نام post-layout.js, که در داخل پوشه ی components قرار دارد
+              // import PostLayout from './content/post-layout';         
+              //   export async function generateStaticParams() {
+              //     return [{ id: '1' }, { id: '2' }]
+              //   }
+                
+              //   async function getPost(params) {
+              //     //adding More Delay
+              //     await new Promise(resolve=>setTimeout(resolve,3000));                
+              //     const res = await fetch(`http://localhost:4000/posts/${params.id}`)
+              //     const post = await res.json();
+                
+              //     return post;
+              //   }            
 
 
 

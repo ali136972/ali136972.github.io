@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Outputs a Single-Page Application (SPA).
+  // dynamic :'force-static',//convert Dynamic Routes(SSR or Server-Side-Rendering) with using GenerateStaticParams, to Static-rendering
+  output: 'export', // Outputs a Single-Page Application (SPA) or Static-pages without Dynamic Routes.
+  distDir: 'dist',
   images: { unoptimized: true },
   //%%%%%%%% خروجی پیش فرض پروژه ی مادر Nextjs 15, بصورت پیش فرض ،در داخل مسیر _next/static ,ذخیره می شود  %%%%%%%%
     //%%%%%%% path:'_next/static' 
@@ -16,7 +18,7 @@ module.exports = nextConfig
 
 
 
-
+////%%%%%%%%%%%***** import DataBase from 'http://localhost:4000' in './_api/db.json' via json-server fetching
 // // const { DESTRUCTION } = require('dns');
 
 // /** @type {import('next').NextConfig} */
@@ -32,9 +34,9 @@ module.exports = nextConfig
 //     assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git/',
   
 //   //%%%%%%%%% اگر پروژه ی خود را در داخل زیر شاخه ی مسیر اصلی(subpath) گیت هاب یا همان branch(origin/main),دیپلوی کنیم باید کد زیر را اضافه کنیم %%%%%%%%
-//     // subPath:'/https://github.com/ali136972/ali136972.github.io.git',
+//     // basePath:'/https://github.com/ali136972/ali136972.github.io.git',
 //     // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
-//     // subPath:'repository-name',
+//     // basePath:'repository-name',
 //     compiler: {
 //       styledComponents: true,
 //     },

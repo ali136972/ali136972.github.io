@@ -10,6 +10,9 @@ import {notFound} from "next/navigation";
 //     id: user.id,
 //   }));
 // }
+
+// 'auto' | 'force-dynamic' | 'error' | 'force-static'
+export const dynamic = 'auto';
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{

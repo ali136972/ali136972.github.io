@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import EmployersList from './EmployersList';
-import Loading from '../loading';
+import Loading from '../content/loading';
 
 /* rout parameter, این پارامترها، مثلا: پارامتر داینامیک :id, :name, ... به آخر آدرس روت، اضافه می شوند و کارخاصی را با استفاده از آنها می توانیم انجام دهیم */
 

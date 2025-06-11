@@ -1,18 +1,23 @@
 import React from 'react';
 import {notFound} from "next/navigation";
 
-/* static rendering(static parameters) in Next js, این پارامترها، مثلا: پارامتر استاتیک و ثابت  id, name, ... فقط با یک بار رکوئست زدن به سرور، داده های جیسو را گرفته و در داخل یک متغیر ثابتی به نام id, name,... می ریزیم و در هر جی وبسایتمان که نیاز باشد آنها را فراخوانی کرده و استفاده می کنیم و دیر نیازی به درخواست دادن به سرور برای دریافت این داده ها نیست */
+/* static rendering(static parameters) in Next js, این پارامترها، مثلا: پارامتر استاتیک و ثابت  id, name, ... فقط با یک بار رکوئست زدن به سرور، داده های جیسون را گرفته و در داخل یک متغیر ثابتی به نام id, name,... می ریزیم و در هر جای وبسایتمان که نیاز باشد آنها را فراخوانی کرده و استفاده می کنیم و دیگر نیازی به درخواست دادن به سرور برای دریافت این داده ها نیست */
+  //%%%%%%%%%% 1. import from API
+  //%%%%%%%%%% 2. import from An ORM or database
 
-// export async function generateStaticParams() {
-//   const  res = await fetch('http://localhost:4000/employers');
-//   const  employers =  await res.json();
-//   return employers.map((employer)=>({
-//     id: employer.id,
-//   }));
-// }
+//%%%%%%%%%% 1. import from API
+  // export async function generateStaticParams() {
+  //   const  res = await fetch('http://localhost:4000/employers');
+  //   const  employers =  await res.json();
+  //   return employers.map((employer)=>({
+  //     id: employer.id,
+  //   }));
+  // }
 
 
 
+// 'auto' | 'force-dynamic' | 'error' | 'force-static'
+export const dynamic = 'auto';
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
@@ -30,6 +35,34 @@ export async function generateStaticParams() {
 
 }
 
+
+
+
+  //%%%%%%%%%% 2. import from An ORM or database
+    // import { db, posts } from '@/lib/db'
+    
+    // export default async function Page() {
+    //   const employers = await db.select().from(employers);
+    //   return (
+    //     <ul>
+    //       {employers.map((employer) => (
+    //         <li key={employers.id}>{employers.title}</li>
+    //       ))}
+    //     </ul>
+    //   )
+    // }
+
+
+
+    // //import from database
+    // import { db, posts } from '@/lib/db'
+    
+    // export async function id() {
+    //   const employers = await db.select().from(employers);
+    //   return employers.map((employer) => ({
+    //     id: employer.id,
+    //   }));
+    // }
 
 
 
