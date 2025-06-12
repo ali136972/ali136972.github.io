@@ -19,7 +19,7 @@ export async function generateStaticParams() {
     // const  res = await fetch('http://localhost:4000/users');    
     const  res = await fetch('http://localhost:4000/users', {
     next:{
-      revalidate: 2
+      revalidate: 0
     }
    });
     const  users =  await res.json();

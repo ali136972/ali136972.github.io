@@ -24,7 +24,7 @@ export async function generateStaticParams() {
     // const  res = await fetch('http://localhost:4000/employers');
     const  res = await fetch('http://localhost:4000/employers', {
     next:{
-      revalidate: 2
+      revalidate: 0
     }
    });
 
