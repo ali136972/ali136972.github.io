@@ -17,11 +17,17 @@ import {notFound} from "next/navigation";
 
 
 // 'auto' | 'force-dynamic' | 'error' | 'force-static'
-export const dynamic = 'auto';
+// export const dynamic = 'auto';
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
-    const  res = await fetch('http://localhost:4000/employers');
+    // const  res = await fetch('http://localhost:4000/employers');
+    const  res = await fetch('http://localhost:4000/employers', {
+    next:{
+      revalidate: 2
+    }
+   });
+
     const  employers =  await res.json();
     return employers.map((employer)=>({
       // id: employer.id.toString,

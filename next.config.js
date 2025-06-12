@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+// Using Partial Prerendering Incremental Adoption (Version 15) or using Dynamic routing like: /employers/[id]
+// ,/employers/[id] in building and deploying time
+  // experimental: {
+  //   ppr: 'incremental',
+  // },
+  
   // reactStrictMode: true,
   // experimental:{
   //   appDir:true,

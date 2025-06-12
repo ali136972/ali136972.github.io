@@ -125,7 +125,6 @@
           }
 
 
-
 export default async function Home({ params }) {
   const projects = await getProjects();
 

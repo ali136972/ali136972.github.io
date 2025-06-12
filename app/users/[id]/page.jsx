@@ -12,11 +12,16 @@ import {notFound} from "next/navigation";
 // }
 
 // 'auto' | 'force-dynamic' | 'error' | 'force-static'
-export const dynamic = 'auto';
+// export const dynamic = 'auto';
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
-    const  res = await fetch('http://localhost:4000/users');
+    // const  res = await fetch('http://localhost:4000/users');    
+    const  res = await fetch('http://localhost:4000/users', {
+    next:{
+      revalidate: 2
+    }
+   });
     const  users =  await res.json();
     return users.map((user)=>({
       // id: user.id.toString,
