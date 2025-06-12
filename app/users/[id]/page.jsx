@@ -1,3 +1,5 @@
+'use cache';
+
 import React from 'react';
 import {notFound} from "next/navigation";
 
@@ -16,10 +18,11 @@ import {notFound} from "next/navigation";
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
+    'use cache';
     // const  res = await fetch('http://localhost:4000/users');    
     const  res = await fetch('http://localhost:4000/users', {
     next:{
-      revalidate: 0
+      revalidate: 60
     }
    });
     const  users =  await res.json();
@@ -51,7 +54,6 @@ if(!res.ok){
 async function getUsers(id){
   // //adding More Delay
   //   await new Promise(resolve=>setTimeout(resolve,3000));
-
   const  res = await fetch('http://localhost:4000/users/' + id, {
    next:{
      revalidate: 2
@@ -63,7 +65,6 @@ async function getUsers(id){
   }
   return res.json();
 }
-
 
 export default async function usersDetails({params}) {
     const {id} = await params;

@@ -5,8 +5,12 @@ const nextConfig = {
   // experimental: {
   //   ppr: 'incremental',
   // },
+
+  experimental: {
+    useCache: true,
+  },
   
-  // reactStrictMode: true,
+  reactStrictMode: true,
   // experimental:{
   //   appDir:true,
   // },
@@ -18,8 +22,8 @@ const nextConfig = {
     //%%%%%%% path:'_next/static' 
   //%%%%%%%%% اگر بخواهیم پروژه ی خود را در داخل یک پوشه یا مسیر فرعی دیگری همانند ریپوزیتوری گیت هاب خودمان ذخیره کنیم باید (ali136972/ali136972.github.io),باید کد زیر را اضافه کنیم %%%%%%%%
     // basePath:'repository-name',    
-    // basePath:'/https://github.com/ali136972/ali136972.github.io.git',
-    // assetPrefix:'/https://github.com/ali136972/ali136972.github.io.git',
+    basePath:'/ali136972.github.io',
+    // assetPrefix:'/ali136972.github.io',
 }
 module.exports = nextConfig
 
