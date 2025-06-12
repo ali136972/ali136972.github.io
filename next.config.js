@@ -16,7 +16,7 @@ const nextConfig = {
   // },
   // dynamic :'force-static',//convert Dynamic Routes(SSR or Server-Side-Rendering) with using GenerateStaticParams, to Static-rendering
   output: 'export', // Outputs a Single-Page Application (SPA) or Static-pages without Dynamic Routes.
-  distDir: 'dist',
+  // distDir: 'dist',
   images: { unoptimized: true },
   //%%%%%%%% خروجی پیش فرض پروژه ی مادر Nextjs 15, بصورت پیش فرض ،در داخل مسیر _next/static ,ذخیره می شود  %%%%%%%%
     //%%%%%%% path:'_next/static' 
