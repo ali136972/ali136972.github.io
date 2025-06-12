@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 //%%%%%%%%%%    نحوه ی استفاده از تصاویر در NEXT JS %%%%%%%%%%%%%%%%

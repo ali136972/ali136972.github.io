@@ -23,7 +23,6 @@ import {notFound} from "next/navigation";
 // export const dynamicParams = true;
 export async function generateStaticParams() {
   try{
-    'use cache';
     // const  res = await fetch('http://localhost:4000/employers');
     const  res = await fetch('http://localhost:4000/employers', {
     next:{
@@ -88,7 +87,6 @@ if(!res.ok){
 async function getEmployers(id){
   //adding More Delay
     await new Promise(resolve=>setTimeout(resolve,3000));
-  'use cache';
   const  res = await fetch('http://localhost:4000/employers/' + id, {
    next:{
      revalidate: 2
@@ -101,7 +99,6 @@ async function getEmployers(id){
   return res.json();
 }
 
-'use cache';
 export default async function EmployerDetails({params}) {
     const {id} = await params;
     const employer = await getEmployers(id);
