@@ -45,7 +45,7 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next@15.4.0-canary.79
       - name: Restore cache
-        uses: actions/cache@latest
+        uses: actions/cache@v4
         with:
           path: |
             .next/cache
